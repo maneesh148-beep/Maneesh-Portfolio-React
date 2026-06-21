@@ -8,18 +8,26 @@ function ProjectCard({ project }) {
   const cls = [
     "work-card",
     project.featured && "work-featured",
+    project.isComingSoon && "work-coming-soon",
     "spotlight tilt reveal",
     shown && "in",
   ]
     .filter(Boolean)
     .join(" ");
 
+  const Wrapper = project.isComingSoon ? "div" : "a";
+  const wrapperProps = project.isComingSoon
+    ? { className: cls }
+    : {
+        href: project.href,
+        className: cls,
+        ...(external ? { target: "_blank", rel: "noopener" } : {}),
+      };
+
   return (
-    <a
+    <Wrapper
       ref={ref}
-      href={project.href}
-      className={cls}
-      {...(external ? { target: "_blank", rel: "noopener" } : {})}
+      {...wrapperProps}
       {...spotlightHandlers()}
       {...tiltHandlers()}
     >
@@ -33,17 +41,18 @@ function ProjectCard({ project }) {
       </div>
       <div className="work-meta">
         <div>
+          {project.isComingSoon && <span className="work-label">Coming Soon</span>}
           <h3>{project.title}</h3>
           <p>{project.desc}</p>
         </div>
-        <span className="work-arrow" aria-hidden="true">→</span>
+        {!project.isComingSoon && <span className="work-arrow" aria-hidden="true">→</span>}
       </div>
       <ul className="work-tags">
         {project.tags.map((t) => (
           <li key={t}>{t}</li>
         ))}
       </ul>
-    </a>
+    </Wrapper>
   );
 }
 

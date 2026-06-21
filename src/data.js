@@ -80,26 +80,29 @@ export const MARQUEE_ITEMS = [
 ];
 
 // thumb: gradient class. img: real screenshot. free: transparent-PNG treatment.
+// isComingSoon: optional boolean to show a prominent "Coming Soon" badge.
 export const PROJECTS = [
   {
-    href: "https://www.figma.com/proto/T4LYDEZcXDKMn1HHyRAZaP/Case-Study--Enhancing-Review-Experience-with-Video-Reviews?node-id=2-3",
+    href: "#",
     featured: true,
+    thumb: "thumb-g",
+    img: "images/elevate-baby-category.png",
+    alt: "Elevating Target Baby category case study cover",
+    isComingSoon: true,
+    title: "Elevating Target Baby category to help busy parents shop with ease",
+    desc: "Business goal: increase average order value (AOV) and units per order (UPO) by improving how parents discover and shop Baby essentials.",
+    tags: ["Target", "E-commerce", "2025"],
+  },
+  {
+    href: "https://www.figma.com/proto/T4LYDEZcXDKMn1HHyRAZaP/Case-Study--Enhancing-Review-Experience-with-Video-Reviews?node-id=2-3",
+    featured: false,
     thumb: "thumb-f",
     flag: "★ Latest case study",
-    img: "images/video-reviews.jpg",
+    img: "images/video-review.png",
     alt: "Video reviews on Target product pages, capture and playback screens",
     title: "Video Reviews",
     desc: "Building shopper confidence and sales with video reviews. I enhanced Target's review experience so guests can add and watch video reviews right on the product page.",
     tags: ["Target", "Guest Experience", "2025"],
-  },
-  {
-    href: "#",
-    thumb: "thumb-g",
-    img: "images/baby-category.jpg",
-    alt: "Elevating Target Baby category case study cover",
-    title: "Elevating Target Baby category to help busy parents shop with ease",
-    desc: "Business goal: increase average order value (AOV) and units per order (UPO) by improving how parents discover and shop Baby essentials.",
-    tags: ["Target", "E-commerce", "2025"],
   },
   {
     href: "https://www.figma.com/deck/vcAxzwC0E8Sr5PezPIEt5S/Untitled?node-id=18-150&t=uXaMpVSxEKyKkEiE-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
@@ -123,6 +126,7 @@ export const PROJECTS = [
   },
   {
     href: "#",
+    isComingSoon: true,
     thumb: "thumb-c",
     img: "images/sourcing-tool.png",
     alt: "Bharat ki Choice sourcing tool for Meesho sellers",
