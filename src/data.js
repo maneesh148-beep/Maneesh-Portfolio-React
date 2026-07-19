@@ -124,26 +124,6 @@ export const PROJECTS = [
     desc: "Designing the catalogue listing feature on mobile to onboard millions of long-tail and first-time sellers onto the platform.",
     tags: ["Meesho", "Mobile", "2023"],
   },
-  {
-    href: "#",
-    isComingSoon: true,
-    thumb: "thumb-c",
-    img: "images/sourcing-tool.png",
-    alt: "Bharat ki Choice sourcing tool for Meesho sellers",
-    title: "Sourcing Tool: 'Bharat ki Choice'",
-    desc: "Market intelligence that helps sellers decide which products to source and sell on Meesho for better order conversion.",
-    tags: ["Meesho", "0→1", "2023"],
-  },
-   {
-    href: "#",
-    isComingSoon: true,
-    thumb: "thumb-c",
-    img: "images/sourcing-tool.png",
-    alt: "Shopping Assistant for shoppers at Target",
-    title: "Shopping Assistant: 'Shopping Assistant for Shoppers at Target'",
-    desc: "Market intelligence that helps sellers decide which products to source and sell on Meesho for better order conversion.",
-    tags: ["Meesho", "0→1", "2023"],
-  },
 ];
 
 export const EXPERTISE_INTRO =
